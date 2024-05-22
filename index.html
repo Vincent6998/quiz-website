@@ -5,48 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css"> <!-- Assurez-vous que votre fichier CSS est correctement lié -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        .centered {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        #quiz {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        button {
-            display: block;
-            margin: 20px auto;
-        }
-
-        #question,
-        #choices {
-            font-size: 18px; /* Modifiez la taille de police selon vos préférences */
-        }
-    </style>
 </head>
 <body>
     <div id="quiz" class="centered">
         <h1>Quiz Aéronautique</h1>
         <div id="categories"></div>
+      <button id="toggle-dark-mode">Mode Sombre</button>
         <button id="startButton" onclick="startGame()">Commencer le quiz</button>
         <div id="question"></div>
         <div id="choices"></div>
