@@ -1,10 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
     margin: 0;
     padding: 0;
 }
 
+.dark-mode {
+    background-color: black;
+    color: white;
+}
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -21,7 +27,11 @@ button {
     display: block;
     margin: 20px auto;
 }
-
+button {
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+}
 .centered {
     display: flex;
     flex-direction: column;
