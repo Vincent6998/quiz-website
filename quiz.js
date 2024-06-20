@@ -1455,6 +1455,31 @@ const allQuestions = [
 
   ];
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const toggleCheckbox = document.getElementById('dark-mode-toggle');
+    const currentMode = localStorage.getItem('dark-mode');
+
+    if (currentMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleCheckbox.checked = true;
+    } else {
+        document.body.classList.add('light-mode');
+    }
+
+    toggleCheckbox.addEventListener('change', () => {
+        if (toggleCheckbox.checked) {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            document.body.classList.add('light-mode');
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
+});
+
+
 let currentQuestion = 0;
 let score = 0;
 let timer;
