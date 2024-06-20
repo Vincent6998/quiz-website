@@ -26,12 +26,10 @@ h1 {
 button {
     display: block;
     margin: 20px auto;
-}
-button {
     padding: 10px 20px;
-    margin: 20px;
     cursor: pointer;
 }
+
 .centered {
     display: flex;
     flex-direction: column;
@@ -50,4 +48,46 @@ button {
 
 #quiz p, #quiz button {
     font-size: 18px; /* ou une taille appropriée */
+}
+.toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    background-color: #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 60px;
+    height: 30px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.toggle-ball {
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: transform 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #333;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-ball {
+    transform: translateX(30px);
 }
